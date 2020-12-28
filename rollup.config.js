@@ -4,8 +4,6 @@ const pkg = require('./package.json');
 import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json';
 import nodeResolve from '@rollup/plugin-node-resolve';
-// import typescript from '@rollup/plugin-typescript';
-
 const resolve = function(...args) {
   return path.resolve(__dirname, ...args);
 };
@@ -20,10 +18,6 @@ export default {
     sourcemap: false,
   },
   plugins: [
-    // commonjs({
-    //   exclude: ['node_modules'],
-    //   extensions: ['.ts', '.js']
-    // }),
     json(),
     babel({
       babelHelpers: 'bundled',
@@ -34,5 +28,4 @@ export default {
       extensions: ['.ts', '.js']
     }),
   ],
-  // external: [/@babel\/runtime/]
 }

@@ -11,3 +11,5 @@ LuoHaoPluginManage.install = function(Vue) {
   }
   PluginManage.install(Vue);
 }
+
+export default LuoHaoPluginManage;
