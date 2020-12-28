@@ -1,3 +1,3 @@
 interface Window {
-  $plugins: any;
+  $PluginManage: any;
 }
