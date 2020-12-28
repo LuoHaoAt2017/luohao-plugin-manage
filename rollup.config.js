@@ -17,7 +17,7 @@ export default {
   output: {
     file: resolve('./', pkg.main),
     format: 'esm',
-    sourcemap: true,
+    sourcemap: false,
   },
   plugins: [
     // commonjs({
