@@ -14,7 +14,7 @@ export default class BaiduOcr extends Plugin {
     ['quota_invoice', '定额发票'],
   ]);
 
-  constructor(opts: PluginOption) {
+  constructor() {
     super();
     // this.opts = opts;
   }

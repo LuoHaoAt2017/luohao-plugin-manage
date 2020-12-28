@@ -21,12 +21,12 @@ export default class PluginManage {
     return PluginManage.instance;
   }
 
-  public install(Vue: any, opts: PluginOption) {
+  public install(Vue: any) {
     // 实例化插件管理中心
     this.getInstance();
 
     // 注册所有的插件
-    this.plugins.set(BaiduOcr.code, new BaiduOcr(opts));
+    this.plugins.set(BaiduOcr.code, new BaiduOcr());
 
     // 挂载插件管理实例到 Vue 上
     Vue.prototype.$PluginManage = PluginManage.instance;
