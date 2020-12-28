@@ -1,0 +1,38 @@
+{
+  "name": "luohao-plugin-manage",
+  "version": "1.0.0",
+  "description": "插件管理",
+  "main": "lib/luohao-plugin.bundle.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "start": "node ./lib/luohao-plugin.bundle.js",
+    "jest": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuoHaoAt2017/luohao-plugin-manage.git"
+  },
+  "author": "LuoHao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuoHaoAt2017/luohao-plugin-manage/issues"
+  },
+  "homepage": "https://github.com/LuoHaoAt2017/luohao-plugin-manage#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-typescript": "^8.1.0",
+    "babel-loader": "^8.2.2",
+    "rollup": "^2.35.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {}
+}
