@@ -24,7 +24,7 @@ export default {
     //   extensions: ['.ts', '.js']
     // }),
     babel({
-      babelHelpers: 'runtime',
+      babelHelpers: 'bundled',
       exclude: ['node_modules'],
       extensions
     }),
@@ -32,5 +32,5 @@ export default {
       extensions: ['.ts', '.js']
     }),
   ],
-  external: [/@babel\/runtime/]
+  // external: [/@babel\/runtime/]
 }
