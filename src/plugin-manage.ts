@@ -14,23 +14,23 @@ export default class PluginManage {
   }
 
   // 获取插件管理中心实例
-  public getInstance(): PluginManage {
+  public static getInstance(): PluginManage {
     if (!PluginManage.instance) {
       PluginManage.instance = new PluginManage();
     }
     return PluginManage.instance;
   }
 
-  public install(Vue: any) {
+  public static install(Vue: any) {
     // 实例化插件管理中心
-    this.getInstance();
+    const $PluginManage = PluginManage.getInstance();
 
     // 注册所有的插件
-    this.plugins.set(BaiduOcr.code, new BaiduOcr());
+    $PluginManage.plugins.set(BaiduOcr.code, new BaiduOcr());
 
     // 挂载插件管理实例到 Vue 上
-    Vue.prototype.$PluginManage = PluginManage.instance;
-    window.$PluginManage = PluginManage.instance;
+    Vue.prototype.$PluginManage = $PluginManage;
+    window.$PluginManage = $PluginManage;
   }
 
   public invoke(pluginCode, serviceName, ...args): Promise<any> {

@@ -5,7 +5,6 @@ const LuoHaoPluginManage = {};
 LuoHaoPluginManage.version = pkg.version;
 LuoHaoPluginManage.author = pkg.author;
 LuoHaoPluginManage.install = function(Vue) {
-  debugger;
   if(window.$plugins) {
     return;
   }
