@@ -16,7 +16,7 @@ export default class BaiduOcr extends Plugin {
     return BaiduOcr.SERVICES;
   }
 
-  mapping(name: String) {
+  mapping(name) {
     return BaiduOcr.SERVICES.get(name);
   }
 
