@@ -31,7 +31,6 @@ export default {
     nodeResolve({
       extensions: ['.ts', '.js']
     }),
-    // typescript()
   ],
   external: [/@babel\/runtime/]
 }
