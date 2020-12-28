@@ -1,11 +1,37 @@
-class Animal {
-  name: string;
-  constructor(theName: string) { this.name = theName; }
-  move(distanceInMeters: number = 0) {
-      console.log(`${this.name} moved ${distanceInMeters}m.`);
+import { PluginOption, Plugin } from './typings';
+import BaiduOcr from './plugins/baidu-ocr';
+
+// 插件管理中心
+export default class PluginManage {
+
+  private plugins: Map<String, Plugin>;
+
+  private static instance: PluginManage;
+
+  // 单例模式
+  private constructor() {
+    this.plugins = new Map();
+  }
+
+  // 获取插件管理中心实例
+  private getInstance(): PluginManage {
+    if (!PluginManage.instance) {
+      PluginManage.instance = new PluginManage();
+    }
+    return PluginManage.instance;
+  }
+
+  public install(host: any, opts: PluginOption) {
+    // 实例化插件管理中心
+    this.getInstance();
+
+    // 注册所有的插件
+    this.plugins.set(BaiduOcr.code, new BaiduOcr());
+    
+    // 挂载插件管理实例到 host 上
+    if (host.prototype) {
+      host.prototype.$plugins = PluginManage.instance;
+    }
+    window.$plugins = PluginManage.instance;
   }
 }
-
-let tom: Animal = new Animal("Tommy the Palomino");
-
-tom.move(34);
