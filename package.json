@@ -1,6 +1,6 @@
 {
   "name": "luohao-plugin-manage",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "description": "插件管理",
   "main": "lib/luohao-plugin.bundle.js",
   "scripts": {
