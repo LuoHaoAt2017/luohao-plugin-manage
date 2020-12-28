@@ -14,7 +14,7 @@ export default class PluginManage {
   }
 
   // 获取插件管理中心实例
-  private getInstance(): PluginManage {
+  public getInstance(): PluginManage {
     if (!PluginManage.instance) {
       PluginManage.instance = new PluginManage();
     }

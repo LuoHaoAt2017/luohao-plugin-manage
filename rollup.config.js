@@ -12,7 +12,7 @@ const resolve = function(...args) {
 const extensions = ['.ts', '.js'];
 
 export default {
-  input: resolve('./src/index.ts'),
+  input: resolve('./src/index.js'),
   output: {
     file: resolve('./', pkg.main),
     format: 'esm',
