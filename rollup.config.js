@@ -1,6 +1,6 @@
 const path = require('path');
 const pkg = require('./package.json');
-// import commonjs from '@rollup/plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json';
 import nodeResolve from '@rollup/plugin-node-resolve';
@@ -27,5 +27,9 @@ export default {
     nodeResolve({
       extensions: ['.ts', '.js']
     }),
+    commonjs({
+      extensions,
+      exclude: ['node_modules'],
+    })
   ],
 }
